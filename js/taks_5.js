@@ -1,8 +1,16 @@
 'use strict';
 
-function getAllPropValues (array, prop) {
-    
-}
+function getAllPropValues(array, prop) {
+    let newArray = [];
+    for (const item of array) {
+        for (const key in item) {
+            if (key === prop) {
+                newArray.push(item[key]);
+          }
+        }
+    }
+    return newArray
+    }
 
 // Объекты и ожидаемый результат
 const products = [
